@@ -1,10 +1,22 @@
-Select
+SELECT
+      Select * from table_name;
+      Select col1 from table_name;
   Distinct
-  where
+      Select Distinct(col) from table_name;
+  Where
+      Select * from table name WHERE cond;
     <,>,=,<=,>=,<>,BETWEEN,LIKE,IN,
   AND,OR,IN
+      Select * from table_name WHERE cond1 AND (cond2 OR cond3);
+      Select * from table_name WHERE col IN (val1,val2)
   Order By
+      Select * from table_name Order By col_name;
+      Select * from table_name Order By col_name DESC;    
+  IS NULL
+      SELECT column_names FROM table_name WHERE column_name IS NULL;
+  IS NOT NULL
+      SELECT column_names FROM table_name WHERE column_name IS NOT NULL;
 INSERT
-  NULL
-  NOT NULL
+      INSERT into table_name(col1,col2,..) Values(val1,val2,...);
 UPDATE
+      UPDATE table_name SET col_name1 = val1, Col_name2 = val2 WHERE cond1,cond2;
