@@ -30,6 +30,8 @@ MAX() & MIN()
       SELECT MAX(col_name) FROM table_name WHERE condn;
 Create Aias (using AS Keyword)
       SELECT MAX(col_name) AS AliasName FROM table_name WHERE condn;
+      SELECT CustomerName, Address + ', ' + PostalCode + ' ' + City + ', ' + Country AS Address FROM Customers;
+      SELECT o.OrderID, o.OrderDate, c.CustomerName FROM Customers AS c, Orders AS o WHERE c.CustomerName='Around the Horn' AND c.CustomerID=o.CustomerID;
 COUNT,AVG,SUM
       SELECT COUNT(col_name) FROM table_name WHERE condn;
       SELECT AVG(col_name) FROM table_name WHERE condn;
@@ -55,4 +57,7 @@ WILDCARD
 IN(shorthand of multiple OR)
       SELECT Col(s) from Table_name WHERE col_name IN('val1','val2'...);
       SELECT Col(s) from Table_name WHERE col_name IN(SELECT statement);
+BETWEEN
+      SELECT * From table_name WHERE col_name BETWEEN val1 and val2; 
+      SELECT * FROM Orders WHERE OrderDate BETWEEN #07/01/1996# AND #07/31/1996#;
       
