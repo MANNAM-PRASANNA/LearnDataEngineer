@@ -20,3 +20,39 @@ INSERT
       INSERT into table_name(col1,col2,..) Values(val1,val2,...);
 UPDATE
       UPDATE table_name SET col_name1 = val1, Col_name2 = val2 WHERE cond1,cond2;
+DELETE
+      DELETE from table_name where cond1;
+Select TOP Clause
+      SELECT TOP numberOfRows * from table_name where cond;
+      SELECT TOP percentage PERCENT * from table_name;
+MAX() & MIN()
+      SELECT MIN(col_name) FROM table_name WHERE condn;
+      SELECT MAX(col_name) FROM table_name WHERE condn;
+Create Aias (using AS Keyword)
+      SELECT MAX(col_name) AS AliasName FROM table_name WHERE condn;
+COUNT,AVG,SUM
+      SELECT COUNT(col_name) FROM table_name WHERE condn;
+      SELECT AVG(col_name) FROM table_name WHERE condn;
+      SELECT SUM(col_name) FROM table_name WHERE condn;
+LIKE
+      % - represents zero, one, or multiple characters
+      _(underscore) - represents one, single character
+      SELECT * FROM table_name WHERE col_name LIKE cond;
+            WHERE CustomerName LIKE 'a%'	      Finds any values that start with "a"
+            WHERE CustomerName LIKE '%a'	      Finds any values that end with "a"
+            WHERE CustomerName LIKE '%or%'	Finds any values that have "or" in any position
+            WHERE CustomerName LIKE '_r%'	      Finds any values that have "r" in the second position
+            WHERE CustomerName LIKE 'a_%'	      Finds any values that start with "a" and are at least 2 characters in length
+            WHERE CustomerName LIKE 'a__%'	Finds any values that start with "a" and are at least 3 characters in length
+            WHERE ContactName LIKE 'a%o'	      Finds any values that start with "a" and ends with "o"   
+NOT LIKE
+      SELECT * FROM table_name WHERE col_name NOT LIKE cond;
+WILDCARD
+      %,_
+      [] - Represents any single character within the brackets
+      ^ - Represents any character not in the brackets e.g: [^ab]
+      # - Single numeric character
+IN(shorthand of multiple OR)
+      SELECT Col(s) from Table_name WHERE col_name IN('val1','val2'...);
+      SELECT Col(s) from Table_name WHERE col_name IN(SELECT statement);
+      
